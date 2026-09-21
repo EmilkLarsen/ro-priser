@@ -37,6 +37,8 @@ def handle(u, html):
     sk = SKU_RE.search(html)
     t = TITLE_RE.search(html)
     name = (t.group(1).split("|")[0].strip() if t else u.rsplit("/", 2)[-2])
+    og = re.search(r'og:image"\s*content="([^"]+)"', html)
+    image = og.group(1) if og else None
     return [{
         "chain": "dedeman_ro",
         "country": "ro",
@@ -47,7 +49,7 @@ def handle(u, html):
         "url": u,
         "price": p,
         "in_stock": None,
-        "image": None,
+        "image": image,
     }]
 
 
