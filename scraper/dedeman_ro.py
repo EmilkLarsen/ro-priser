@@ -1,7 +1,7 @@
 """Dedeman.ro (RON, Romania's BIGGEST) — sitemap-products{0..N}.xml;
 URLs /<slug>/p/<id>; Magento itemprop price + sku (no ld+json)."""
 import re
-from common import get, sitemap_urls, sane_price, valid_ean, write_jsonl, scrape_urls
+from common import get, sitemap_urls, sane_price, valid_ean, write_jsonl, scrape_urls, scrape_with_checkpoint
 
 BASE = "https://www.dedeman.ro"
 OUT = "data/latest/dedeman_ro.jsonl"
@@ -53,8 +53,8 @@ def handle(u, html):
     }]
 
 
-def scrape(limit=None):
-    return scrape_urls(fetch_url_list(limit), handle)
+def scrape(limit=None, deadline=None):
+    return scrape_with_checkpoint("dedeman_ro", fetch_url_list(limit), handle, limit, deadline)
 
 
 if __name__ == "__main__":
