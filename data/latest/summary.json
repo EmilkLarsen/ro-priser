@@ -3,11 +3,11 @@
  "total_rows": 134636,
  "chains": {
   "dedeman_ro": {
-   "products": 130773,
+   "products": 37805,
    "price_changes": 0,
    "suspicious_changes": 0,
    "expired": 0,
-   "seconds": 4520.4
+   "seconds": 18003.7
   }
  }
 }
