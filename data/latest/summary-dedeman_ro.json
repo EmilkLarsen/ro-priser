@@ -1,12 +1,12 @@
 {
- "date": "2026-10-21",
+ "date": "2026-10-22",
  "chains": {
   "dedeman_ro": {
-   "products": 68165,
+   "products": 91802,
    "price_changes": 0,
    "suspicious_changes": 0,
    "expired": 0,
-   "seconds": 18004.7
+   "seconds": 18004.1
   }
  }
 }
