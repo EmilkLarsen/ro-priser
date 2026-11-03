@@ -2,11 +2,11 @@
  "date": "2026-11-02",
  "chains": {
   "dedeman_ro": {
-   "products": 129733,
+   "products": 39055,
    "price_changes": 0,
    "suspicious_changes": 0,
-   "expired": 75,
-   "seconds": 16595.8
+   "expired": 0,
+   "seconds": 18004.6
   }
  }
 }
